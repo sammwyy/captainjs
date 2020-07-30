@@ -2,13 +2,10 @@
 
 ### Captain.js
 A toolkit for NodeJS which contains Debugger and Console Utilities.  
-[Debugger](https://../) | [Console](https://../) | [Colors](https://../) | [Commands](https://../)
+<p align="center"> <a href="#debugger">Debugger</a> | <a href="#console">Console</a> | <a href="#colors">Colors</a> | <a href="#commands">Commands</a> </p>
 
 #### What is Captain.js?
 Captain.js is a toolkit that provides console utilities such as debugging, logging, and commands.  
-  
-
-
 
 ### Console
 **Format console**  
