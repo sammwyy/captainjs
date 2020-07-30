@@ -1,0 +1,12 @@
+{
+    "name": "captainjs",
+    "version": "1.0.0",
+    "description": "A toolkit for NodeJS which contains Debugger and Console Utilities.",
+    "main": "./src/index.js",
+    "scripts": {
+        "test": "node ./test.js"
+    },
+    "keywords": ["debugger", "logger", "nodejs", "console", "colors"],
+    "author": "sammwy",
+    "license": "ISC"
+}
