@@ -8,5 +8,6 @@
     },
     "keywords": ["debugger", "logger", "nodejs", "console", "colors"],
     "author": "sammwy",
-    "license": "ISC"
+    "license": "ISC",
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
