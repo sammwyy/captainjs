@@ -2,7 +2,7 @@
 
 ### Captain.js
 A toolkit for NodeJS which contains Debugger and Console Utilities.  
-<p align="center"> <a href="#debugger">Debugger</a> | <a href="#console">Console</a> | <a href="#colors">Colors</a>
+<p align="center"> <a href="#debugger">Debugger</a> | <a href="#console">Console</a> | <a href="#colors">Colors</a> | <a href="#commands">Commands</a>
 
 #### What is Captain.js?
 Captain.js is a toolkit that provides console utilities such as debugging, logging, and commands.  
@@ -124,3 +124,38 @@ console.debug();
 ```
 > Output:  
 [23:57:44] [Debug] Debug called from Object.<anonymous>(); || test.js:5:9
+
+
+
+
+### Commands
+**Register a command**  
+Registers a function that will be executed when the specified command is written to the terminal.  
+```javascript
+const Captain = require('captainjs');
+const Commander = new Captain.Commander();
+
+Commander.registerCommand("hello", (args) => {
+    console.log("Hello world");
+});
+
+Commander.fetch();
+```
+
+
+
+**Change the command input prefix**  
+change the text to be displayed when a command needs to be sent.  
+```javascript
+Commander.setPrefix("Type a command here: ");
+```
+
+
+
+**Handle unknown commands**  
+executes an action when trying to execute a non-existent command.  
+```javascript
+Commander.onUnknownCommand((cmd) => {
+    console.error("Invalid Command: " + cmd);
+})
+```
