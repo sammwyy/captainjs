@@ -64,7 +64,7 @@ class Console {
     formatString(type, str) {
         let format = this.getConfig("format");
         let use_colors = this.getConfig("use_colors");
-        let prefix = this.getConfig(type + "_prefix") || "Unknown";
+        let prefix = this.getConfig(type + "_prefix") || Color.DarkAqua + type + Color.Reset;
         let text = format.replace(/\%message\%/gi, str).replace(/\%prefix\%/gi, prefix).replace("%time%", this.getTime());
 
         if (use_colors) {
@@ -75,6 +75,8 @@ class Console {
 
         return text
     }
+
+
 
     stripeColors(str) {
         let chars = "0123456789abcdefr";
