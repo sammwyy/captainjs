@@ -3,10 +3,12 @@ const Commander = new Captain.Commander();
 
 console = new Captain.Console();
 
+
 Commander.setPrefix(console.formatString("Input", "$ "));
 
 Commander.registerCommand("test", (args) => {
     console.log("Arguments: " + args);
+    console.log("Hello asdasdasdasd", "world", "here", "my", "code", "example")
 });
 
 Commander.registerCommand("eval", (args) => {
