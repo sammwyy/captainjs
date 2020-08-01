@@ -55,17 +55,21 @@ class Console {
 
     formatList(type, list) {
         for (let i = 0; i < list.length; i++) {
-            list[i] = this.formatString(type, list[i]);
+            list[i] = this.formatString(type, list[i], i === 0);
         }
 
         return list;
     }
 
-    formatString(type, str) {
+    formatString(type, str, isFirst) {
         let format = this.getConfig("format");
         let use_colors = this.getConfig("use_colors");
         let prefix = this.getConfig(type + "_prefix") || Color.DarkAqua + type + Color.Reset;
-        let text = format.replace(/\%message\%/gi, str).replace(/\%prefix\%/gi, prefix).replace("%time%", this.getTime());
+        let text = str;
+
+        // Only apply the format to the first item in the array :D
+        if (isFirst)
+            text = format.replace("%message%", str).replace("%prefix%", prefix).replace("%time%", this.getTime());
 
         if (use_colors) {
             text = this.colorizeString(text);
@@ -75,7 +79,6 @@ class Console {
 
         return text
     }
-
 
 
     stripeColors(str) {
@@ -106,13 +109,13 @@ class Console {
         let mins = "" + date.getMinutes();
         let secs = "" + date.getSeconds();
 
-        if (hours.length == 1)
+        if (hours.length === 1)
             hours = 0 + hours;
 
-        if (mins.length == 1)
+        if (mins.length === 1)
             mins = 0 + mins;
 
-        if (secs.length == 1)
+        if (secs.length === 1)
             secs = 0 + secs;
 
         return hours + ":" + mins + ":" + secs;
