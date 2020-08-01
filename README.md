@@ -20,9 +20,9 @@ console.warn("Warning! you are awesome.");
 ```
 
 > Output:  
-[23:57:44] [Log] Hello
-[23:57:44] [Error] This is an error
-[23:57:44] [Warn] Warning! you are awesome.
+[23:57:44] [Log] Hello  
+[23:57:44] [Error] This is an error  
+[23:57:44] [Warn] Warning! you are awesome.  
 
 
 
