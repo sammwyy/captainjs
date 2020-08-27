@@ -34,8 +34,8 @@ class Console {
     }
 
     info(...args) {
-        args = this.formatList(MessageType.LOG, args);
-        return this.original.log(...args);
+        args = this.formatList(MessageType.INFO, args);
+        return this.original.info(...args);
     }
 
     debugLog(...args) {
