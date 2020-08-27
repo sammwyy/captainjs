@@ -1,6 +1,6 @@
 {
     "name": "captainjs",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "A toolkit for NodeJS which contains Debugger and Console Utilities.",
     "main": "./src/index.js",
     "scripts": {
